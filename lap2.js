@@ -4,4 +4,4 @@ function varExample(){
     }
     console.log(x);
 }
-varExample();
+varExample()
