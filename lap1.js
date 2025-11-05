@@ -1,11 +1,11 @@
 function calculateBMI(weight, height) {
     const bmi = weight / (height * height);
     let category = "";
-    if (bmi < 18.5) {
+    if (bmi < 20) {
         category = "Thiếu cân";
-    } else if (bmi < 25) {
+    } else if (bmi < 40) {
         category = "Bình thường";
-    } else if (bmi < 30) {
+    } else if (bmi < 60) {
         category = "Thừa cân";
     } else {
         category = "Béo phì";
@@ -34,6 +34,6 @@ function createBook(title, author, year, price) {
     };
 }
 
-const book = createBook("JavaScript ES6", "Công", 2023, 200000);
+const book = createBook("JavaScript ES6", "Tuan", 9999, 200000);
 console.log(book.getBookInfo());
 console.log(book.calculateDiscount(10));
