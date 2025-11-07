@@ -41,50 +41,50 @@ console.log(student);
 
 
 ///////Bài 1
-// const user = {
-//     firstName: "Nguyen",
-//     lastName: "Van B",
-//     product: "IP17",
-//     price: "30000000",
-//     orderDate: "2025-10-30", 
-// };
-// const emailTemplate = `
-// Xin chào ${user.firstName} ${user.lastName},
+const user = {
+    firstName: "Nguyen",
+    lastName: "Van B",
+    product: "IP17",
+    price: "30000000",
+    orderDate: "2025-10-30", 
+};
+const emailTemplate = `
+Xin chào ${user.firstName} ${user.lastName},
 
-// Cảm ơn bạn đã đặt mua sản phẩm: ${user.product}.
-// Giá trị đơn hàng: ${user.price.toLocaleString("vi-VN")} VND.
-// Ngày đặt hàng: ${user.orderDate}.
+Cảm ơn bạn đã đặt mua sản phẩm: ${user.product}.
+Giá trị đơn hàng: ${user.price.toLocaleString("vi-VN")} VND.
+Ngày đặt hàng: ${user.orderDate}.
 
-// Chúng tôi sẽ liên hệ sớm để xác nhận và giao hàng trong thời gian sớm nhất.
+Chúng tôi sẽ liên hệ sớm để xác nhận và giao hàng trong thời gian sớm nhất.
 
-// Trân trọng,
-// Đội ngũ Hỗ trợ Khách hàng
-//  `;
+Trân trọng,
+Đội ngũ Hỗ trợ Khách hàng
+ `;
 
-// console.log(emailTemplate);
+console.log(emailTemplate);
 
 //// Bài 2
-// const product = {
-//     name: "IP15",
-//     price: 20000000,
-//     discount: 10,
-//     inStock: true,
-// };
+const product = {
+    name: "IP15",
+    price: 20000000,
+    discount: 10,
+    inStock: true,
+};
 
-// const finalPrice = product.price * (1- product.discount /100);
+const finalPrice = product.price * (1- product.discount /100);
 
-// const productCard = `
+const productCard = `
 
-//     ${product.name}
-//     Giá gốc: ${product.price.toLocaleString("vi-VN")} VND
-//     Giảm giá: ${product.discount}%
-//     Giá sau giảm: ${finalPrice.toLocaleString("vi-VN")} VND
-//     Tình trạng:
-//     ${product.inStock ? "Còn hàng" : "Hết hàng"}
+    ${product.name}
+    Giá gốc: ${product.price.toLocaleString("vi-VN")} VND
+    Giảm giá: ${product.discount}%
+    Giá sau giảm: ${finalPrice.toLocaleString("vi-VN")} VND
+    Tình trạng:
+    ${product.inStock ? "Còn hàng" : "Hết hàng"}
    
-// `;
+`;
 
-// console.log(productCard);
+console.log(productCard);
 
 // 3. Enhanced Object Literals
 const width = 100;
