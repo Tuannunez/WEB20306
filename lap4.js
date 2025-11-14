@@ -76,7 +76,7 @@ delay(2000).then(() => console.log("2 seconds passed"));
 function fetchMultipleData(urls) {
   return Promise.all(
     urls.map((url) => fetch(url).then((res) => res.json()))
-  );
+  );  
 }
 
 fetchMultipleData(["/api/lfc/1", "/api/sou/2"])
