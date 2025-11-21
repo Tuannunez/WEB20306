@@ -1,26 +1,53 @@
-export default function Footer() {
-  const footerStyle = {
-    backgroundColor: '#1f2937', // nền xám đậm
-    color: '#f3f4f6',           // chữ trắng sáng
-    padding: '20px',
-    textAlign: 'center',
-  };
-
-  const textStyle = {
-    fontWeight: 600,
-    fontSize: '16px',   // tương đương text-xl
-    lineHeight: 1.5,
-    maxWidth: '800px',
-    margin: '0 auto',
-  };
-
+function Footer() {
   return (
-    <footer style={footerStyle}>
-      <p style={textStyle}>
-        Bản quyền của ECMA ® 2024. Bảo lưu mọi quyền. Ghi rõ nguồn
-        "www.abc.com.vn" ® khi sử dụng lại thông tin từ website này. Số giấy
-        phép kinh doanh lữ hành Quốc tế: 79-234/2022/TCDL-GP LHQT.
-      </p>
+    <footer className="bg-gray-800 text-white p-10 mt-10">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 className="text-lg font-bold mb-4">Về Chúng Tôi</h3>
+          <p className="text-sm">✈️ TOUR MANAGEMENT SYSTEM</p>
+          <p className="text-sm mt-2">Hotline: 0364887965</p>
+          <p className="text-sm">Email: tourphuot@gmail.com</p>
+        </div>
+        <div>
+          <h3 className="text-lg font-bold mb-4">Trợ Giúp</h3>
+          <ul className="space-y-2">
+            <li>
+              <a href="#" className="text-sm hover:text-blue-400">
+                Câu hỏi thường gặp (FAQ)
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-sm hover:text-blue-400">
+                Chính sách hoàn tiền
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-bold mb-4">Khám Phá</h3>
+          <ul className="space-y-2">
+            <li>
+              <a href="#" className="text-sm hover:text-blue-400">
+                Các Tour Nội địa
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-sm hover:text-blue-400">
+                Cẩm nang du lịch
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="text-lg font-bold mb-4">Kết Nối Với Chúng Tôi</h3>
+          <p className="text-sm mb-4">Theo dõi chúng tôi trên mạng xã hội:</p>
+          <p className="text-xs mt-6">
+            © 2025 Tour Management System. All rights reserved.
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }
+
+export default Footer;

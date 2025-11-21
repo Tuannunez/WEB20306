@@ -1,40 +1,35 @@
-export default function Header() {
+import { Link } from 'react-router-dom';
+function Header() {
   return (
-    <nav className="bg-gray-800 text-gray-100 p-4 shadow-md fixed w-full top-0 z-50">
-      <ul className="flex items-center justify-around font-semibold max-w-5xl mx-auto">
+    <nav className="my-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ul className="flex items-center justify-start space-x-10 text-2xl">
         <li>
-          <a
-            href="/"
-            className="hover:text-yellow-400 transition-colors duration-200"
-          >
-            Home
-          </a>
+          <Link className="font-bold text-blue-600 hover:underline" to="/">
+            Trang Chủ
+          </Link>
         </li>
         <li>
-          <a
-            href="/"
-            className="hover:text-yellow-400 transition-colors duration-200"
-          >
-            About
-          </a>
+          <Link className="font-semibold text-gray-700 hover:underline" to="#">
+            Các Tours Du Lịch
+          </Link>
         </li>
         <li>
-          <a
-            href="/"
-            className="hover:text-yellow-400 transition-colors duration-200"
-          >
-            Booking
-          </a>
+          <Link className="font-semibold text-gray-700 hover:underline" to="#">
+            Các Điểm Đến
+          </Link>
         </li>
         <li>
-          <a
-            href="/"
-            className="hover:text-yellow-400 transition-colors duration-200"
-          >
-            Contact
-          </a>
+          <Link className="font-semibold text-gray-700 hover:underline" to="#">
+            Đặt Tour
+          </Link>
+        </li>
+        <li>
+          <Link className="font-semibold text-gray-700 hover:underline" to="/About">
+            Về chúng tôi
+          </Link>
         </li>
       </ul>
     </nav>
   );
 }
+export default Header;
