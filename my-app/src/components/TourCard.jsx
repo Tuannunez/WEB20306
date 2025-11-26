@@ -18,7 +18,7 @@ function TourCard(props) {
                     className="w-full h-full object-cover transform hover:scale-105 transition duration-500" 
                 />
             </div>
-            <h3 className="font-bold text-lg text-center mt-4 mb-4 text-blue-800 grow">
+            <h3 className="font-bold text-lg text-center mt-4 mb-4 text-red-900 grow">
                 {props.title}
             </h3>
             <div className="flex justify-between mt-4">

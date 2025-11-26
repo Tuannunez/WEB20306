@@ -46,7 +46,7 @@ console.log(swapElements([1, 2, 3, 4, 5])); // [1, 4, 3, 2, 5]
 const user = {
   id: 1,
   personalInfo: {
-    name: "Vợ anh",
+    name: "Hết phim",
     contact: {
       email: "Voanh@email.com",
       phone: "123-456-7890",

@@ -6,26 +6,46 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TourCard from "../components/TourCard";
 import Heading from "../components/Heading";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Home() {
+ const [tour, setTours] = useState([]);
+ 
+ useEffect(() => {
+   console.log("Chạy thử 1 lần");
+   const getTours = async () => {
+  try{
+    const{data} = await axios.get("http://localhost:3001/tours")
+    setTours(res.data)
+  }catch (error){
+    console.log(error);
+
+  }
+}
+getTours()
+
+ }, []);
+ 
   const tours = [
     {
       id: 1,
-      title: "Hạ Long Huyền Bí - 3 Ngày 2 Đêm",
+      title: "Cát Bà thú vị - 3 Ngày 2 Đêm",
       image:
-        "https://tructhang.vn/wp-content/uploads/2022/08/Vinh-Ha-Long-1024x576.jpg",
+        "https://sinhcafetour.vn/pic/Tour/CAT-BA_63_637915964181415712_HasThumb.png",
     },
     {
       id: 2,
-      title: "Khám phá Phố Cổ Hội An",
+      title: "Khám phá Tà Xùa - Săn mây tuyệt đẹp",
       image:
-        "https://gocheapv.b-cdn.net/storage/app/media/Travel/h%E1%BB%99i%20an/pho-co-hoi-an.png",
+        "https://viettrekking.vn/wp-content/uploads/2021/10/tour-leo-nui-ta-xua-viettrekking.jpg",
     },
+  
     {
       id: 3,
-      title: "Đà Lạt Mộng Mơ - Tour Cắm Trại",
+      title: "Khám phá vườn Quốc Gia Ba Vì",
       image:
-        "https://samtenhills.vn/wp-content/uploads/2024/11/kinh-nghiem-du-lich-da-lat-1-minh.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeT4cTJxiz97Hg6Rg83XviI-6t2p0MFiP6Kw&s",
     },
   ];
   return (
@@ -34,16 +54,16 @@ function Home() {
       <hr className="mt-5 h-3 border-gray-300" />
       <main>
         <h1 className="font-extrabold text-4xl md:text-5xl text-blue-500 text-center mb-2">
-          TOUR MANAGEMENT SYSTEM
+          TN_TRAVEL 
         </h1>
         <h2 className="font-medium text-lg text-gray-700 text-center mb-10">
-          Sẵn Sàng Cất Cánh: Các Điểm Đến Nổi Bật Mà Bạn Không Thể Bỏ Qua Trong
-          Mùa Du Lịch Này
+          Khám Phá Mọi Điểm Đến
+          
         </h2>
         <Heading />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 p-4 bg-white rounded-xl shadow-lg">
           {tours.map((tour) => (
-            <TourCard key={tour.id} title={tour.title} image={tour.image} />
+            <TourCard key={tour.id} title={tour.name} image={tour.image} />
           ))}
         </div>
         <div>
